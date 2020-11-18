@@ -1,0 +1,115 @@
+% LaTeX resume using res.cls
+\documentclass[margin,10pt]{res}
+\usepackage{enumitem}
+\usepackage{sourcesanspro}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{slantsc}
+\usepackage[letterspace=85]{microtype}
+\newsectionwidth{0.8in}
+\setlist[itemize]{leftmargin=*}
+\renewcommand{\familydefault}{\sfdefault}
+\name{\begin{minipage}[t]{\textwidth}
+\includegraphics[height=0.5cm]{dllu.pdf}
+\hspace{0.5cm}
+\Large
+Daniel Lawrence Lu
+\vspace{6mm}
+\end{minipage}}
+\address{\begin{minipage}[t]{\textwidth}
+\sc
+\lsstyle
+\href{https://daniel.lawrence.lu}{https://daniel.lawrence.lu}
+\hfill
+daniel@lawrence.lu
+\hfill
+1-206-604-0014
+\hfill
+san francisco
+\\
+\href{https://github.com/dllu}{https://github.com/dllu}
+\end{minipage}}
+\begin{document}
+\begin{resume}
+\section{\sc \lsstyle work}
+    \href{https://tempus-ex.com}{\textbf{Tempus Ex Machina}}, San Francisco CA\hfill \textsc{\bfseries\lsstyle 2020-09 -- present}\\
+    \textit{Staff Computer Vision Engineer}\hfill Python, Rust
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Automatic real time camera calibration;
+        \item Real time camera-lidar 3D human pose estimation and tracking.
+    \end{itemize}
+
+    \href{https://ouster.io}{\textbf{Ouster}}, San Francisco CA\hfill \textsc{\bfseries\lsstyle 2016-09 -- 2020-09}\\
+    \textit{Mapping Lead Software Engineer}\hfill C++, Python, OpenGL
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Architected and implemented core algorithms as the first software engineer, including:
+        \begin{itemize}
+            \item Real time multi-lidar 6DoF \textsc{slam} with: < 1\% drift, loop closure, robust GPS georeferencing;
+            \item On-manifold SE(3) Lie group optimiser for continuous-time pose graphs;
+            \item Automatic extrinsic calibration between multiple lidars and inertial measurement units;
+            \item Geometric real time ground segmentation of unordered point clouds;
+            \item OpenGL and WebGL point cloud visualisations and evaluation tools;
+            \item Detailed LaTeX documentation explaining all mathematical derivations.
+        \end{itemize}
+        \item Hired and mentored direct reports.
+    \end{itemize}
+
+    \textbf{Carnegie Mellon University}, Pittsburgh PA \hfill \textsc{\bfseries\lsstyle 2015-08 -- 2016-08}\\
+    \textit{Graduate Student Researcher}\hfill C++11, \textsc{ros}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Real time visual-inertial-lidar 6DoF \textsc{slam} for autonomous off-road vehicle.
+    \end{itemize}
+
+    \textbf{Facebook}, Seattle WA \hfill \textsc{\bfseries\lsstyle 2015-05 -- 2015-08}\\
+    \textit{Software Engineering Intern}\hfill Hack/\textsc{php}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Full stack development for the Save For Later functionality.
+    \end{itemize}
+
+    \textbf{Facebook}, Seattle WA \hfill \textsc{\bfseries\lsstyle 2014-05 -- 2014-08}\\
+    \textit{Software Engineering Intern}\hfill C++, HiveQL, Hack/\textsc{php}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item Collaborative filtering algorithms for recommending Facebook Pages;
+        \item Data processing to aggregate features from multiple sources.
+    \end{itemize}
+
+    \textbf{University of British Columbia}, Vancouver BC\hfill \textsc{\bfseries\lsstyle 2011-05 -- 2011-12}\\
+    \textit{Research Assistant}\hfill C++, \textsc{cuda}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item GPU-accelerated real time registration of ultrasound and \textsc{cat} scans for epidural administration.
+    \end{itemize}
+
+    %\textbf{Pierre Zakarauskas (Zak Technology)}, Vancouver BC\hfill \textsc{\bfseries\lsstyle 2010-01 -- 2010-04}\\
+    %\textit{Engineering Co-op Student}\hfill\textsc{matlab}
+    %\vspace{0.5em}
+    %\begin{itemize}
+        %\item Localising bats and birds by multilateration using microphone array;
+        %\item Bat species classification using audio spectrogram cross-correlation.
+    %\end{itemize}
+\section{\sc \lsstyle school}
+    \textbf{Carnegie Mellon University}, Master of Science \hfill \textsc{\bfseries\lsstyle 2014-08 -- 2016-08}\\
+    Robotics Institute, Advisor: George Kantor\hfill GPA: 3.76\\
+    Thesis: \textit{Vision-Enhanced Lidar Odometry and Mapping}\vspace{3pt}\\
+    %\vspace{5pt}\\
+    \textbf{University of British Columbia}, Bachelor of Applied Science \hfill \textsc{\bfseries\lsstyle 2008-09 -- 2014-05}\\
+    Engineering Physics\hfill GPA: 82.1\% (A-)%\vspace{3pt}\\
+\section{\sc \lsstyle skills}
+    \textbf{Languages:}
+    C++20, \textsc{cuda}, Javascript, \textsc{matlab}, Python, Rust \\
+    %\textbf{CAD:} Rhinoceros 3D, Solidworks \\
+    \textbf{Operating system:} \textsc{gnu}/Linux\\
+    Canadian citizen, USA Green Card holder. Fluent in English and Mandarin.\\
+\end{resume}
+\begin{minipage}[t]{\textwidth}
+    \flushright
+    \small
+    \sc \lsstyle
+    \hfill updated 2020-11-18
+\end{minipage}
+\end{document}
