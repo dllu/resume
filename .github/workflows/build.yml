@@ -6,12 +6,22 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
+      - name: Install deps
+        run: |
+          sudo apt-get update && sudo apt-get -y install poppler-utils
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
-      - name: Upload file
-        uses: actions/upload-artifact@v2
+      - name: Generate thumbnail
+        run: |
+          pdftoppm -png -hide-annotations resume.pdf > resume.png
+      - name: SCP file
+        uses: appleboy/scp-action@master
         with:
-          name: PDF
-          path: resume.pdf
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          source: "resume.pdf,resume.png"
+          target: "/www/misc"
