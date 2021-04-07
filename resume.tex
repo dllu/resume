@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{slantsc}
 \usepackage[letterspace=85]{microtype}
+\usepackage[style=iso]{datetime2}
 \newsectionwidth{0.8in}
 \setlist[itemize]{leftmargin=*}
 \renewcommand{\familydefault}{\sfdefault}
@@ -36,8 +37,9 @@ san francisco
     \textit{Staff Software Engineer --- Computer Vision}\hfill Python, Rust, TypeScript
     \vspace{0.5em}
     \begin{itemize}
-        \item Automatic single shot monocular camera to sports field calibration;
-        \item Real time camera-lidar 3D human pose estimation and tracking.
+        \item Automatic single-shot monocular camera to sports field calibration;
+        \item Real time deep learning-based multi-object tracking and human pose estimation;
+        \item Full data lifecycle including: data extraction; administrating labelling platform and annotators; training (Tensorflow/Keras); experiment tracking (MLflow/WandB); deployment (ONNX).
     \end{itemize}
 
     \href{https://ouster.io}{\textbf{Ouster}}, San Francisco CA\hfill \textsc{\bfseries\lsstyle 2016-09 -- 2020-09}\\
@@ -47,6 +49,7 @@ san francisco
         \item Architected and implemented core algorithms as the first software engineer, including:
         \begin{itemize}
             \item Real time multi-lidar 6DoF \textsc{slam} with: < 1\% drift, loop closure, robust GPS georeferencing;
+            \item Deep learning based lidar feature extraction for SLAM and tracking;
             \item On-manifold SE(3) Lie group optimiser for continuous-time pose graphs;
             \item Automatic extrinsic calibration between multiple lidars and \textsc{imu}s;
             \item Geometric real time ground segmentation of unordered point clouds;
@@ -89,6 +92,6 @@ san francisco
     \flushright
     \small
     \sc \lsstyle
-    \hfill updated 2020-11-18
+    \hfill updated \today
 \end{minipage}
 \end{document}
