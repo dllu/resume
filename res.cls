@@ -788,8 +788,8 @@
 \topsep 0pt
 \parskip 0pt
 \partopsep 2pt plus 2pt
-\parsep 2pt plus 2pt
-\itemsep \parsep}
+\parsep 0pt
+\itemsep 0pt}
 
 \pagestyle{empty}  % don't want page numbers
 
