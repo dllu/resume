@@ -1,5 +1,5 @@
 % LaTeX resume using res.cls
-\documentclass[margin,10pt]{res}
+\documentclass[margin,9pt]{res}
 \usepackage{enumitem}
 \usepackage{sourcesanspro}
 \usepackage{hyperref}
@@ -33,56 +33,54 @@ san jose, ca\\
 \begin{resume}
 \section{\sc \lsstyle work}
     \href{https://nvidia.com}{\textbf{NVIDIA}}, Santa Clara, CA\hfill \textsc{\bfseries\lsstyle 2025-09~~ -- ~~present}\\
-    \textit{Software Engineer}\hfill C++
+    \textit{Software Engineer IC5, NVIDIA DRIVE, Context Fusion team}\hfill C++
     \vspace{0.5em}\\
-    Context fusion for autonomous vehicles.
+    Designed and implemented novel geometric algorithms to fuse noisy perception with incomplete SD map priors to produce structured vector output that is geometrically accurate within perception FOV and topologically consistent at long range
 
     \href{https://mainstreetautonomy.com}{\textbf{Main Street Autonomy}}, San Jose, CA\hfill \textsc{\bfseries\lsstyle 2023-10~~ -- ~~2025-09}\\
     \textit{Software Engineer}\hfill C++, Python
     \vspace{0.5em}\\
     Architected and implemented core algorithms as early stage engineer:
     \begin{itemize}
-        \item Acausal sensor-agnostic lidar-only odometry 10$\times$ faster than real time with low drift 
-        \item Differentiable lidar intrinsics calibration for various lidar types
-        \item Depth camera to lidar point cloud alignment and calibration, including intrinsics and disparity
+        \item Lidar odometry: Acausal fast trajectory estimation
+        \item Calibration: Differentiable lidar intrinsics calibration; depth/RGBD camera to lidar calibration; VGGT demo for camera init
     \end{itemize}
     
     \href{https://tesla.com/ai}{\textbf{Tesla}}, Palo Alto, CA\hfill \textsc{\bfseries\lsstyle 2021-10~~ -- ~~2023-10}\\
-    \textit{Senior Software Engineer --- Autopilot}\hfill C++, Python
+    \textit{Senior Software Engineer --- Autopilot, Geometric Vision team}\hfill C++, Python
     \vspace{0.5em}
+    Worked on autolabelling project reducing human labelling effort per clip from 533~hours to 0.1~hours as shown in \href{https://youtu.be/ODSJsviD_SU?t=6034}{Tesla AI Day 2022}:
     \begin{itemize}
-        \item Main developer of ground surface reconstruction portion of autolabelling product, reducing human labelling effort per clip from 533~hours to 0.1~hours as shown in \href{https://youtu.be/ODSJsviD_SU?t=6034}{Tesla AI Day 2022}
-        \item Contributed loss functions to real time visual-inertial odometry running in-car and on-robot
+        \item Led ground surface reconstruction and GPU-accelerated projection/voting of camera segmentation masks onto the 3D ground surface
+        \item Scaled multi-view 3D reconstruction and autolabelling pipelines across large compute clusters for fleet-scale data
+        \item Prototyped Gaussian splatting for scene reconstruction
+    \end{itemize}
+    Trajectory estimation and \textsc{slam}
+    \begin{itemize}
+        \item Designed and implemented high-accuracy offline trajectory estimation system for ground truth generation using independent sensor pipelines
+        \item Contributed loss functions to real-time visual-inertial odometry running in-car
     \end{itemize}
 
     \href{https://tempus-ex.com}{\textbf{Tempus Ex Machina}}, San Francisco, CA\hfill \textsc{\bfseries\lsstyle 2020-09~~ -- ~~2021-10}\\
     \textit{Staff Software Engineer --- Computer Vision}\hfill Python, Rust, TypeScript
     \vspace{0.5em}
-    \begin{itemize}
-        \item Developed automatic single-shot monocular camera to sports field calibration
-        \item One of two developers of real time deep learning multi-object tracking and human pose estimation
-    \end{itemize}
+    Developed single-shot monocular camera to sports field calibration and deep learning multi-object tracking and human pose estimation.
 
     \href{https://ouster.com}{\textbf{Ouster}}, San Francisco, CA\hfill \textsc{\bfseries\lsstyle 2016-09~~ -- ~~2020-09}\\
     \textit{Founding Software Engineer --- 3D Mapping}\hfill C++, Python, OpenGL
     \vspace{0.5em}\\
     Architected and implemented core algorithms as the first software engineer (while growing team from 1 to 10 people and company from 7 to 200):
     \begin{itemize}
-        \item Real time multi-lidar 6DoF \textsc{slam} with <~1\% drift with continuous-time SE(3) spline trajectory
-        \item Backend offline map generation with loop closure, robust GPS georeferencing
+        \item Online real time multi-lidar \textsc{slam} with <~1\% drift with continuous-time SE(3) spline trajectory; offline map generation with loop closure, robust GPS georeferencing
         \item Extrinsic calibration; ground segmentation; OpenGL and WebGL visualisers
     \end{itemize}
 
 \section{\sc \lsstyle intern}
-    \textbf{Facebook} (2014, 2015): Collaborative filtering data pipelines for page recommendation\\
-    \textbf{CMU Autonomous Yamaha Viking} (2014 -- 2016): Lidar \textsc{slam} for off-road vehicle \\
-    \textbf{UBC Ultrasound Lab} (2011): \textsc{cuda} registration of ultrasound volumes to \textsc{cat} scans
+    \textbf{Facebook}: 2014, 2015 page recommendation; \textbf{CMU Autonomous Yamaha Viking}: 2014 -- 2016 Lidar \textsc{slam}; \textbf{UBC Ultrasound Lab}: 2011 ultrasound to \textsc{cat} scan registration
 \section{\sc \lsstyle school}
     \textbf{Carnegie Mellon University}, Master of Science in Robotics \hfill \textsc{\bfseries\lsstyle 2014-08~~ -- ~~2016-08}\\
-    Thesis: \textit{Vision-Enhanced Lidar Odometry and Mapping}\vspace{3pt}\\
     \textbf{University of British Columbia}, B.A.Sc, Engineering Physics \hfill \textsc{\bfseries\lsstyle 2008-09~~ -- ~~2014-05}\\
-\section{\sc \lsstyle skills}
-    C++, JavaScript/TypeScript, Python, Rust \\
+\section{\sc \lsstyle status}
     Canadian citizen, USA Green Card holder. Fluent in English and Mandarin.\\
 \end{resume}
 \begin{minipage}[t]{\textwidth}
